@@ -1,0 +1,57 @@
+.Conteiner_principal_dashboard_menu_top_botton{
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    padding-left: 2%;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #d2d2d2;
+}
+.Conteier_Principal_Dashboard_Menu_Top_Botton_Box{
+    width: 150px;
+    height: 65%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 7px;
+    transition: .2s ease;
+    cursor: pointer;
+}
+.preenchimento_azul{
+    background-color: var(--primary);
+    color: var(--card-light);
+}
+.Conteier_Principal_Dashboard_Menu_Top_Botton_Box:hover:not(.preenchimento_azul) {
+    transition: .2s ease;
+    background-color: #f1f1f1;
+}
+.Conteier_Principal_Dashboard_Menu_Top_Botton_Box:active{
+    transform: scale(0.9);
+}
+.Conteier_Principal_Dashboard_Menu_Top_Botton_Box svg{
+    width: 30px;
+    height: 30px;
+    transition: .5s ease;
+}
+.Conteier_Principal_Dashboard_Menu_Top_Botton_Box:active svg{
+    transition: .2s ease;
+    transform: scale(1.5) rotateX(50deg) rotateY(-160deg);
+}
+@media screen and (max-width: 1200px) {
+ 
+    .Conteiner_principal_dashboard_menu_top_botton{
+        overflow: hidden;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        min-height: 70px;
+
+    }
+    .Conteier_Principal_Dashboard_Menu_Top_Botton_Box{
+        flex-shrink: 0;
+    }
+    
+}

@@ -1,0 +1,66 @@
+.Conteiner_Principal_Categoria{
+    width: 100%;
+    height: 100%;
+
+}
+.Conteiner_Principal_Categoria_Conteiner_Botton_Registrar_Categoria{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #11111155;
+    z-index: 9999999999999;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.Conteiner_Principal_Categoria_Conteiner_Botton_Registrar_Categoria_formulario{
+    width: 35%;
+    height: 35vh;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Conteiner_Principal_Categoria_Conteiner_Botton_Registrar_Categoria_formulario input{
+    width: 80%;
+    height: 7vh;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    padding-left: 4%;
+    outline-color: #0A84FF;
+
+
+}
+.Conteiner_Principal_Categoria_Conteiner_Botton_Registrar_Categoria_formulario button:active{
+    transition: .2s ease;
+    transform: scale(0.9);
+}
+.btnCategoriaAdd{
+    width: 80%;
+    height: 7vh;
+    background-color: #0A84FF;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+.btnCategoriaCancelar{
+    width: 80%;
+    height: 7vh;
+    background-color: #f1f1f1;
+    border: 1px solid #bdbcbc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease;
+
+}

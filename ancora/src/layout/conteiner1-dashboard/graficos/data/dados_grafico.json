@@ -1,0 +1,31 @@
+[
+    {
+        "labe":"Domingo" , 
+        "value": 45
+    },
+    {
+        "labe":"Segunda feira" , 
+        "value": 15
+    },
+    {
+        "labe":"Terça feira" , 
+        "value": 37
+    },
+    {
+        "labe":"Quarta feira" , 
+        "value": 84
+    },
+    {
+        "labe":"Quinta feira" , 
+        "value": 20
+    },
+    {
+        "labe":"Sexta feira" , 
+        "value": 50
+    },
+    {
+        "labe":"Sabado" , 
+        "value": 33
+    }
+
+]

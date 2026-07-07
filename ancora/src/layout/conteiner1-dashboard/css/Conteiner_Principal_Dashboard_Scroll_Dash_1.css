@@ -1,0 +1,92 @@
+.Conteiner_Principal_Dashboard_Scroll_Dash_1{
+    width: 98%;
+    height: 27vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box{
+    width: 23.5%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: .2s ease;
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box:hover{
+    transition: .2s ease;
+    transform: scale(1.01);
+    box-shadow: var(--shadow-lg);
+    margin-top: -1%;
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa{
+    width: 100%;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa h3{
+    color: #bbb;
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div:nth-child(2){
+    width: 40px;
+    height: 40px;
+    background-color:  #0a84ff21;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div svg{
+    width: 40px;
+    height: 40px;
+    color: var(--primary);
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa b{
+    font-size: 2rem;
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box:nth-child(2) .Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div:nth-child(2){
+    background-color: rgba(6, 233, 6, 0.082);
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box:nth-child(2) .Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div svg{
+    color: rgb(6, 233, 6);
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box:nth-child(3) .Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div:nth-child(2){
+    background-color: rgba(255, 166, 0, 0.116);
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box:nth-child(3) .Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div svg{
+    color: orange;
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box:nth-child(4) .Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div:nth-child(2){
+    background-color: rgba(255, 0, 0, 0.089);
+}
+.Conteiner_Principal_Dashboard_Scroll_Dash_1_Box:nth-child(4) .Conteiner_Principal_Dashboard_Scroll_Dash_1_Box_caxa div svg{
+    color: red;
+}
+@media screen and (max-width: 1200px) {
+    .Conteiner_Principal_Dashboard_Scroll_Dash_1{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 10px;
+
+    }
+    .Conteiner_Principal_Dashboard_Scroll_Dash_1_Box{
+        width: 100%;
+        height: 180px;
+        margin-bottom: 10px;
+        padding: 5%;
+
+  
+    }
+}

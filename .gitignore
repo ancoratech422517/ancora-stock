@@ -1,0 +1,5 @@
+# Dependências do React/Vite
+node_modules/
+
+# Variáveis de ambiente Python
+.env

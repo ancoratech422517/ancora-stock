@@ -1,0 +1,212 @@
+.Conteiner_Principal_catalogo_Conteiner_Botton{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    gap: 10px;
+    padding: 1%;
+}
+.Conteiner_Principal_Catalogo_Conteiner_Botton_menu_Top{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox:nth-child(1){
+    width: 74%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #d2d2d2;
+    outline-color: #0A84FF;
+}
+
+.Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox:nth-child(1) input{
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 1.1em;
+}
+.Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox:nth-child(1) svg{
+    width: 20px;
+    height: 20px;
+}
+.Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox:nth-child(2){
+    width: 25%;
+    height: 80%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox:nth-child(2) select {
+    width: 100%;
+    height: 100%;
+    outline-color: #0A84FF;
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    padding-left: 2%;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner{
+    width: 100%;
+    height: 65vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_menu_Top{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    padding-left: 1%;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_menu_Top li{
+    width: 16.66666666666667%;
+    height: 100%;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    color: #646464;
+    font-weight: 600;
+
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_menu_Top li:nth-child(1){
+    width: 70px;
+
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll{
+    width: 100%;
+    height: 88%;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1%;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li{
+    width: 16.66666666666667%;
+    height: 100%;
+    display: flex;
+    text-align: left;
+    align-items: center;
+
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:nth-child(1){
+    width: 70px;
+    height: 60px;
+    border-radius: 10px;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:nth-child(1) img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #0A84FF;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:last-child{
+    border-radius: 0px 0px 10px 10px;
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:last-child button{
+    width: 110px;
+    height: 5vh;
+    border: none;
+    border-radius: 7px;
+    color: #fff;
+    font-weight: 600;
+    background-color: green;
+    cursor: pointer;
+    transition: .2s ease;
+
+}
+.Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:last-child button:active{
+    transition: .2s ease;
+    transform: scale(0.9);
+}
+.Conteiner_Principal_CAtalogo_Vazio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+.Conteiner_Principal_CAtalogo_Vazio h2{
+    color: #444444;
+}
+.Conteiner_Principal_CAtalogo_Vazio svg{
+    width: 50px;
+    height: 50px;
+    color: #0A84FF;
+}
+@media screen and (max-width:1200px) {
+    .Conteiner_Principal_Catalogo_Botton_Conteiner_menu_Top li:nth-child(5){
+        display: none;
+    }
+    .Conteiner_Principal_Catalogo_Botton_Conteiner_menu_Top li{
+        font-size: 14px;
+    }
+    .Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados{
+        padding: 1%;
+    }
+    .Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:nth-child(5){
+        display: none;
+    }
+    .Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li{
+        font-size: 14px;
+    }
+    .Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:nth-child(1) {
+        width: 60px;
+        height: 50px;
+    }
+ 
+    .Conteiner_Principal_Catalogo_Botton_Conteiner_scroll_dados li:last-child button{
+
+         font-size: 14px;
+    }
+    .Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox{
+        min-height: 40px;
+    }
+    .Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox:nth-child(1) input{
+        height: 45px;
+        min-height: 45px;
+    }
+    .Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox select{
+        min-height: 45px;
+    }
+    .Conteiner_Principal_Catalogo_Conteiner_Botton_menu_TopBox{
+        min-height: 50px;
+    }
+ 
+
+}

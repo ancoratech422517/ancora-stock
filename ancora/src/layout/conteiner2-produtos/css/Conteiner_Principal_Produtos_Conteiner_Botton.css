@@ -1,0 +1,284 @@
+.Conteiner_Principal_Produtos_Conteiner_Botton{
+    width: 100%;
+    height: 80%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Menu_top{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Menu_top button{
+    width: 170px;
+    height: 6vh;
+    background-color: #0A84FF;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: none;
+    transition: .2s ease;
+    cursor: pointer;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Menu_top button svg{
+    color: #fff;
+    font-weight: bold;
+    width: 16px;
+    height: 16px;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Menu_top button{
+    transition: .2s ease;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Menu_top button:active{
+    transform: scale(0.9);
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo{
+    width: 100%;
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Menu_Top{
+    width: 100%;
+    height: 12%;
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Menu_Top li{
+    width: 14.28571428571429%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #6d6d6d;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll{
+    width: 100%;
+    height: 88%;
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li{
+    width: 14.28571428571429%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(1) .imagem_dados{
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(1) .imagem_dados img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid #0A84FF;
+    object-fit: cover;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(7){
+    gap: 10px;
+
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(7) button{
+    width: 80px;
+    height: 4vh;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease;
+    
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(7) button:active{
+    transition: .2s ease;
+    transform: scale(0.9);
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(7) button:nth-child(1){
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(7) button:nth-child(2){
+    background-color: rgba(255, 0, 0, 0.808);
+    color: #fff;
+    font-weight: 600;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99999999999999;
+    background-color: #11111155;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario{
+    width: 35%;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario input{
+    width: 80%;
+    height: 7vh;
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    padding-left: 4%;
+    outline-color: #0A84FF;
+    border-radius: 10px;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario select{
+    width: 80%;
+    height: 7vh;
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    border-radius: 10px;
+    outline-color: #0A84FF;
+    padding-left: 4%;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario label{
+    width: 80%;
+    height: 7vh;
+    background-color: #f1f1f1;
+    border: 1px solid #d2d2d2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s ease;
+    border-radius: 10px;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario label:active{
+    transition: .2s ease;
+    transform: scale(0.9);
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario button:active{
+    transition: .2s ease;
+    transform: scale(0.9);
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario .btn1{
+    width: 80%;
+    height: 7vh;
+    background-color: #0A84FF;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s ease;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.Conteiner_Principal_Produtos_Conteiner_Botton_Registrar_Produto_formulario .btn2{
+    width: 80%;
+    height: 6vh;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s ease;
+    border: 1px solid #d2d2d2;
+}
+.Conteiner_Principal_Produto_Vazio{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.Conteiner_Principal_Produto_Vazio svg{
+    width: 50px;
+    height: 50px;
+    color: #0A84FF;
+}
+.Conteiner_Principal_Produto_Vazio h2{
+    color: #444444;
+}
+@media screen and (max-width: 1200px) {
+    .Conteiner_Principal_Produtos_Conteiner_Botton_Menu_top h3{
+        font-size: 16px;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_Menu_top button{
+        width: 120px;
+        height: 5vh;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Menu_Top li{
+        font-size: 11px;
+        color: #080808;
+        width: 20%;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Menu_Top li:nth-child(4){
+        display: none;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Menu_Top li:nth-child(5){
+        display: none;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados{
+        height: 15vh;
+        padding: 3%;
+        gap: 10px;
+
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li{
+        font-size: 11px;
+        color: #080808;
+        width: 20%;
+        display: flex;
+        text-align: left;
+        align-items: center;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(1) .imagem_dados{
+        width: 60px;
+        height: 40px;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(7){
+        flex-direction: column;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(4){
+        display: none;
+    }
+    .Conteiner_Principal_Produtos_Conteiner_Botton_conteudo_Scroll_dados li:nth-child(5){
+        display: none;
+    }
+}
