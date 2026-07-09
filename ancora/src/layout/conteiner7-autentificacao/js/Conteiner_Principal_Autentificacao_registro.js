@@ -1,6 +1,6 @@
 import { useUserStore } from "../../../useUseSotore"
-export async function Conteiner_Principal_Autentificacao_Registro (set_estado_login) {
-
+export async function Conteiner_Principal_Autentificacao_Registro (set_estado_login , setEtadoLoadingCarro) {
+    setEtadoLoadingCarro(true)
     const url = useUserStore.getState().url_backend
     const nome_registro = document.getElementById("nome_registro").value
     const numero_registro = document.getElementById("numero_registro").value
@@ -23,5 +23,12 @@ export async function Conteiner_Principal_Autentificacao_Registro (set_estado_lo
     })
     const resposta_backend = await registrar_novo_empresario.json()
     set_estado_login("login")
-
+    if (resposta_backend.status === "true"){
+        setEtadoLoadingCarro(false)
+    }
+    else{
+        setEtadoLoadingCarro(false)
+        alert(resposta_backend.resposta)
+    }
+    
 }

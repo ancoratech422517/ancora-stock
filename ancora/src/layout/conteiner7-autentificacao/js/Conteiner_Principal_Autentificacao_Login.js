@@ -1,7 +1,8 @@
 import { useUserStore } from "../../../useUseSotore";
 import { Conteiner_Principal_BuscarDados_Categoria } from "../../conteiner8-buscar_dados/Conteiner_Principal_Buscar_Dados";
 import { Conteiner_Principal_BuscarDados_Produto } from "../../conteiner8-buscar_dados/Conteiner_Principal_Buscar_Dados";
-export async function Conteiner_Principal_Autentificacao_Login(setEstadoConteinerAtual , set_dados_usuario) {
+export async function Conteiner_Principal_Autentificacao_Login(setEstadoConteinerAtual , set_dados_usuario , setEtadoLoadingCarro) {
+    setEtadoLoadingCarro(true)
     const url = useUserStore.getState().url_backend
     const numero_login = document.getElementById("numero_login").value
     const senha_login = document.getElementById("senha_login").value
@@ -25,9 +26,11 @@ export async function Conteiner_Principal_Autentificacao_Login(setEstadoConteine
         set_dados_usuario(resposta_backend.dados)
         Conteiner_Principal_BuscarDados_Categoria()
         Conteiner_Principal_BuscarDados_Produto()
+        setEtadoLoadingCarro(false)
 
     }
     else{
         alert("credencias erradas")
+        setEtadoLoadingCarro(false)
     }
 }

@@ -3,11 +3,23 @@ import "./css/Conteiner_Principal_Autentificacao.css"
 import Image_form from "../../assets/image_form.jpeg"
 import { Conteiner_Principal_Autentificacao_Registro } from "./js/Conteiner_Principal_Autentificacao_registro";
 import { Conteiner_Principal_Autentificacao_Login } from "./js/Conteiner_Principal_Autentificacao_Login";
+import LoadingCarro from "../conteiner-loading/loading-carro";
 import { useUserStore } from "../../useUseSotore";
 
 export default function Conteiner_Principal_Autentificacao () {
     const [estado_login , set_estado_login] = useState("login")
-    const {setEstadoConteinerAtual , set_dados_usuario} = useUserStore()
+    const [estadoLoadingCarro , setEtadoLoadingCarro] = useState(false)
+
+    const condicaoLoadingCarro = () => {
+        switch(estadoLoadingCarro){
+            case true:
+                return (
+                    <LoadingCarro />
+                )
+
+        }
+    }
+     const {setEstadoConteinerAtual , set_dados_usuario} = useUserStore()
     const condicao_estado_login = () => {
         switch(estado_login){
             case "login":
@@ -17,7 +29,7 @@ export default function Conteiner_Principal_Autentificacao () {
                         <p>seja bem vindo ao sistema de gestão da Âncora Tech</p>
                         <input type="text" name="numero_login" id="numero_login" placeholder="Digite seu Terminal" />
                         <input type="password" id="senha_login" placeholder="Digite sua seha" />
-                        <button onClick={()=>{Conteiner_Principal_Autentificacao_Login(setEstadoConteinerAtual , set_dados_usuario)}}>Entrar</button>
+                        <button onClick={()=>{Conteiner_Principal_Autentificacao_Login(setEstadoConteinerAtual , set_dados_usuario , setEtadoLoadingCarro)}}>Entrar</button>
                         <li onClick={()=>{set_estado_login("registro")}}>não tenho uma conta</li>
                     </div>
 
@@ -31,7 +43,7 @@ export default function Conteiner_Principal_Autentificacao () {
                         <input type="text" name="numero" id="numero_registro" placeholder="Digite seu Terminal" />
                         <input type="password" id="senha_registro" placeholder="Digite sua seha" />
                         <input type="password" id="confirmar_senha_registro" placeholder="Confirma a sua senha" />
-                        <button onClick={()=>{Conteiner_Principal_Autentificacao_Registro(set_estado_login)}}>Registrar-se</button>
+                        <button onClick={()=>{Conteiner_Principal_Autentificacao_Registro(set_estado_login , setEtadoLoadingCarro)}}>Registrar-se</button>
                         <li onClick={()=>{set_estado_login("login")}}>Já tenho uma conta</li>
                     </div>
 
@@ -45,6 +57,7 @@ export default function Conteiner_Principal_Autentificacao () {
                     <img src={Image_form} alt="" />
                 </div>
                 {condicao_estado_login()}
+                {condicaoLoadingCarro()}
             </div>
         </div>
     )
