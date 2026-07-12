@@ -79,8 +79,6 @@ export default function Conteiner_Principal_Produtos () {
     }
     return (
         <div className="Conteiner_principal_Produtos">
-            <Conteiner_principal_dashboard_menu_top />
-            <Conteiner_Principal_Dashboard_Menu_Top_Botton />
             <Conteiner_Principal_Produtos_Conteiner_Botton />
             {condicao_EstadoForm ()}
         </div>

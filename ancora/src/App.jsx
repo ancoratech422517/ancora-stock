@@ -8,6 +8,8 @@ import Conteiner_Principal_Vendas from "./layout/conteiner4-vendas/Conteiner_Pri
 import Conteiner_Prinicipal_Catalogo from "./layout/conteiner5-catalogo/Conteiner_Principal_Catalogo";
 import Conteiner_Principal_Relatorio from "./layout/conteiner6-ralatorio/Conteiner_Principal_Relatorio";
 import Conteiner_Principal_Autentificacao from "./layout/conteiner7-autentificacao/Conteiner_Principal_Autentificacao";
+import Conteiner_principal_dashboard_menu_top from "./layout/conteiner1-dashboard/Conteiner_principal_dashboard_menu_top";
+import { Conteiner_Principal_Dashboard_Menu_Top_Botton } from "./layout/conteiner1-dashboard/Conteiner_principal_dashboard_menu_top_botton";
 import { useUserStore } from "./useUseSotore";
 export default function App(){
   const {EstadoConteinerActual} = useUserStore()
@@ -48,6 +50,8 @@ export default function App(){
   }
   return (
     <div className="ConteinerPai">
+      <Conteiner_principal_dashboard_menu_top />
+      <Conteiner_Principal_Dashboard_Menu_Top_Botton />
         {condicao_conteiner_actual()}
     </div>
   )

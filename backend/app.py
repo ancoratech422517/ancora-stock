@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_cors import CORS
-from dotenv import load_dotenv  # Importa a função para carregar o .env
+from dotenv import load_dotenv  
 from routes.api_registrar_empresario import registrar_empresario
 from routes.api_registrar_categoria import Registrar_Categoria
 from routes.api_buscar_dados_categoria import Buscar_Dados_Categoria
@@ -16,16 +16,32 @@ from routes.api_download_relatorio import Download_Relatorio
 from routes.api_dados_dashboard import Dashboard_API
 from models.database import db
 
-# Carrega as variáveis do arquivo .env para o ambiente do Python
+# Carrega as variáveis do arquivo .env
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
 
-# Configuração da Base de Dados usando a variável de ambiente
-# O os.getenv('DATABASE_URL') vai buscar o valor que está no seu arquivo .env
+# 1. Configuração básica da URI
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# 2. Proteção contra instabilidade de rede (Timeouts e Reciclagem)
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+    # 'connect_timeout' define quanto tempo (em segundos) o psycopg2 vai esperar para conectar antes de dar erro.
+    # Ajustamos para 30 segundos para dar tempo à rede lenta.
+    "connect_args": {
+        "connect_timeout": 120,
+        "keepalives": 1,
+        "keepalives_idle": 30,
+        "keepalives_interval": 10,
+        "keepalives_count": 5
+    },
+    # Recicla as conexões a cada 180 segundos para evitar conexões "fantasmas" que caíram na rede instável
+    "pool_recycle": 180,
+    # Verifica se a conexão ainda está viva antes de tentar usá-la
+    "pool_pre_ping": True
+}
 
 # Vincula o SQLAlchemy ao App Flask
 db.init_app(app)
@@ -44,9 +60,15 @@ app.register_blueprint(Buscar_Relatorio)
 app.register_blueprint(Download_Relatorio)
 app.register_blueprint(Dashboard_API)
 
-# Cria as tabelas dentro do contexto correto
+# Cria as tabelas dentro do contexto correto com tratamento de erro amigável
 with app.app_context():
-    db.create_all()
+    try:
+        db.create_all()
+        print("-> Tabelas criadas ou verificadas com sucesso na base de dados!")
+    except Exception as e:
+        print("\n[AVISO CRÍTICO] Não foi possível conectar à base de dados para criar as tabelas.")
+        print("Verifica se estás ligado à internet ou se a rede não caiu.")
+        print(f"Erro original: {e}\n")
 
 if __name__ == "__main__":
     app.run(debug=True)

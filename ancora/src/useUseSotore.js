@@ -3,6 +3,7 @@ import { persist, createJSONStorage } from 'zustand/middleware'
 
 
 let url = "https://ancora-stock.onrender.com"
+let url2 = "http://127.0.0.1:5000"
 
 export const useUserStore = create(
   

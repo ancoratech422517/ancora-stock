@@ -4,8 +4,6 @@
     background-color: var(--card-light);
     display: flex;
     justify-content: space-between;
-    box-shadow:  0px 20px 30px red;
-    border-bottom: 1px solid red;
 
     border-bottom: 1px solid var(--border);
     position: sticky;

@@ -26,8 +26,6 @@ export default function Conteiner_Principal_Categoria () {
     }
     return(
         <div className="Conteiner_Principal_Categoria">
-            <Conteiner_principal_dashboard_menu_top />
-            <Conteiner_Principal_Dashboard_Menu_Top_Botton />
             <Conteiner_Principal_Categoria_Conteiner_Botton />
             {condicao_setEstadoForm()}
         </div>

@@ -6,8 +6,6 @@ import Conteiner_Principal_Catalogo_Conteiner_Botton from "./Conteiner_Principal
 export default function Conteiner_Prinicipal_Catalogo () {
     return (
         <div className="Conteiner_Principal_Catalogo">
-            <Conteiner_principal_dashboard_menu_top />
-            <Conteiner_Principal_Dashboard_Menu_Top_Botton />
             <Conteiner_Principal_Catalogo_Conteiner_Botton />
         </div>
     )
